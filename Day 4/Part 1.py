@@ -218,6 +218,18 @@ cards = [
 import re
 
 def calc_cards(cards):
+    """
+    Calculates the total score based on number of matches on a given card, and the exercises rules about scoring..
+
+    Parameters:
+    cards (List[str]): A list of strings representing cards, each containing winning and playing numbers.
+
+    Returns:
+    int: The total score calculated from the winning combinations in the provided cards.
+
+    Function Description:
+    This function takes a list of card strings, where each string contains information about winning and playing numbers. It processes and extracts this information, counting the number of matches for each card. The function then calculates the total score based on the identified number of matches. The final result is the total score derived from all the provided cards.
+    """
     ans = []
     for index, card in enumerate(cards):
         parsed_card = re.match('\w+\s+\d+\: ([\d+ ]{10,}) \| +([\d+ ]{20,})', card)
