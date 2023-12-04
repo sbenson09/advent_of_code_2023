@@ -190,4 +190,4 @@ def calc_grid(grid):
                 if re.search('[\@\#\$\%\&\*\/\=\-\+]+' , line[search_left:search_right]):
                     ans.append(int(match.group(0)))
     return sum(ans)
-print(calc_grid(test_grid))
+print(calc_grid(grid))
